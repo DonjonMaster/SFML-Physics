@@ -263,6 +263,78 @@ src/Ball.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Ball.cpp.s
 .PHONY : src/Ball.cpp.s
 
+src/Engine/ColliderComponent.o: src/Engine/ColliderComponent.cpp.o
+.PHONY : src/Engine/ColliderComponent.o
+
+# target to build an object file
+src/Engine/ColliderComponent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Engine/ColliderComponent.cpp.o
+.PHONY : src/Engine/ColliderComponent.cpp.o
+
+src/Engine/ColliderComponent.i: src/Engine/ColliderComponent.cpp.i
+.PHONY : src/Engine/ColliderComponent.i
+
+# target to preprocess a source file
+src/Engine/ColliderComponent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Engine/ColliderComponent.cpp.i
+.PHONY : src/Engine/ColliderComponent.cpp.i
+
+src/Engine/ColliderComponent.s: src/Engine/ColliderComponent.cpp.s
+.PHONY : src/Engine/ColliderComponent.s
+
+# target to generate assembly for a file
+src/Engine/ColliderComponent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Engine/ColliderComponent.cpp.s
+.PHONY : src/Engine/ColliderComponent.cpp.s
+
+src/Engine/Engine.o: src/Engine/Engine.cpp.o
+.PHONY : src/Engine/Engine.o
+
+# target to build an object file
+src/Engine/Engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Engine/Engine.cpp.o
+.PHONY : src/Engine/Engine.cpp.o
+
+src/Engine/Engine.i: src/Engine/Engine.cpp.i
+.PHONY : src/Engine/Engine.i
+
+# target to preprocess a source file
+src/Engine/Engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Engine/Engine.cpp.i
+.PHONY : src/Engine/Engine.cpp.i
+
+src/Engine/Engine.s: src/Engine/Engine.cpp.s
+.PHONY : src/Engine/Engine.s
+
+# target to generate assembly for a file
+src/Engine/Engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Engine/Engine.cpp.s
+.PHONY : src/Engine/Engine.cpp.s
+
+src/Engine/scenes/PhysicsScene.o: src/Engine/scenes/PhysicsScene.cpp.o
+.PHONY : src/Engine/scenes/PhysicsScene.o
+
+# target to build an object file
+src/Engine/scenes/PhysicsScene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Engine/scenes/PhysicsScene.cpp.o
+.PHONY : src/Engine/scenes/PhysicsScene.cpp.o
+
+src/Engine/scenes/PhysicsScene.i: src/Engine/scenes/PhysicsScene.cpp.i
+.PHONY : src/Engine/scenes/PhysicsScene.i
+
+# target to preprocess a source file
+src/Engine/scenes/PhysicsScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Engine/scenes/PhysicsScene.cpp.i
+.PHONY : src/Engine/scenes/PhysicsScene.cpp.i
+
+src/Engine/scenes/PhysicsScene.s: src/Engine/scenes/PhysicsScene.cpp.s
+.PHONY : src/Engine/scenes/PhysicsScene.s
+
+# target to generate assembly for a file
+src/Engine/scenes/PhysicsScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Engine/scenes/PhysicsScene.cpp.s
+.PHONY : src/Engine/scenes/PhysicsScene.cpp.s
+
 src/Platform.o: src/Platform.cpp.o
 .PHONY : src/Platform.o
 
@@ -286,78 +358,6 @@ src/Platform.s: src/Platform.cpp.s
 src/Platform.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Platform.cpp.s
 .PHONY : src/Platform.cpp.s
-
-src/engine/ColliderComponent.o: src/engine/ColliderComponent.cpp.o
-.PHONY : src/engine/ColliderComponent.o
-
-# target to build an object file
-src/engine/ColliderComponent.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o
-.PHONY : src/engine/ColliderComponent.cpp.o
-
-src/engine/ColliderComponent.i: src/engine/ColliderComponent.cpp.i
-.PHONY : src/engine/ColliderComponent.i
-
-# target to preprocess a source file
-src/engine/ColliderComponent.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.i
-.PHONY : src/engine/ColliderComponent.cpp.i
-
-src/engine/ColliderComponent.s: src/engine/ColliderComponent.cpp.s
-.PHONY : src/engine/ColliderComponent.s
-
-# target to generate assembly for a file
-src/engine/ColliderComponent.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.s
-.PHONY : src/engine/ColliderComponent.cpp.s
-
-src/engine/Engine.o: src/engine/Engine.cpp.o
-.PHONY : src/engine/Engine.o
-
-# target to build an object file
-src/engine/Engine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o
-.PHONY : src/engine/Engine.cpp.o
-
-src/engine/Engine.i: src/engine/Engine.cpp.i
-.PHONY : src/engine/Engine.i
-
-# target to preprocess a source file
-src/engine/Engine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.i
-.PHONY : src/engine/Engine.cpp.i
-
-src/engine/Engine.s: src/engine/Engine.cpp.s
-.PHONY : src/engine/Engine.s
-
-# target to generate assembly for a file
-src/engine/Engine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.s
-.PHONY : src/engine/Engine.cpp.s
-
-src/engine/scenes/PhysicsScene.o: src/engine/scenes/PhysicsScene.cpp.o
-.PHONY : src/engine/scenes/PhysicsScene.o
-
-# target to build an object file
-src/engine/scenes/PhysicsScene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/scenes/PhysicsScene.cpp.o
-.PHONY : src/engine/scenes/PhysicsScene.cpp.o
-
-src/engine/scenes/PhysicsScene.i: src/engine/scenes/PhysicsScene.cpp.i
-.PHONY : src/engine/scenes/PhysicsScene.i
-
-# target to preprocess a source file
-src/engine/scenes/PhysicsScene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/scenes/PhysicsScene.cpp.i
-.PHONY : src/engine/scenes/PhysicsScene.cpp.i
-
-src/engine/scenes/PhysicsScene.s: src/engine/scenes/PhysicsScene.cpp.s
-.PHONY : src/engine/scenes/PhysicsScene.s
-
-# target to generate assembly for a file
-src/engine/scenes/PhysicsScene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/scenes/PhysicsScene.cpp.s
-.PHONY : src/engine/scenes/PhysicsScene.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -404,18 +404,18 @@ help:
 	@echo "... src/Ball.o"
 	@echo "... src/Ball.i"
 	@echo "... src/Ball.s"
+	@echo "... src/Engine/ColliderComponent.o"
+	@echo "... src/Engine/ColliderComponent.i"
+	@echo "... src/Engine/ColliderComponent.s"
+	@echo "... src/Engine/Engine.o"
+	@echo "... src/Engine/Engine.i"
+	@echo "... src/Engine/Engine.s"
+	@echo "... src/Engine/scenes/PhysicsScene.o"
+	@echo "... src/Engine/scenes/PhysicsScene.i"
+	@echo "... src/Engine/scenes/PhysicsScene.s"
 	@echo "... src/Platform.o"
 	@echo "... src/Platform.i"
 	@echo "... src/Platform.s"
-	@echo "... src/engine/ColliderComponent.o"
-	@echo "... src/engine/ColliderComponent.i"
-	@echo "... src/engine/ColliderComponent.s"
-	@echo "... src/engine/Engine.o"
-	@echo "... src/engine/Engine.i"
-	@echo "... src/engine/Engine.s"
-	@echo "... src/engine/scenes/PhysicsScene.o"
-	@echo "... src/engine/scenes/PhysicsScene.i"
-	@echo "... src/engine/scenes/PhysicsScene.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

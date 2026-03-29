@@ -25,9 +25,9 @@ add_executable(sfml_test
     src/main.cpp
     src/Ball.cpp
     src/Platform.cpp
-    src/engine/ColliderComponent.cpp
-    src/engine/Engine.cpp
-    src/engine/scenes/PhysicsScene.cpp
+    src/Engine/ColliderComponent.cpp
+    src/Engine/Engine.cpp
+    src/Engine/scenes/PhysicsScene.cpp
 )
 
 target_link_libraries(sfml_test PRIVATE SFML::Graphics SFML::Window SFML::System)

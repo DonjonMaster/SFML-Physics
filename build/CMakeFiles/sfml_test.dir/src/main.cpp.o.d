@@ -1,7 +1,7 @@
 CMakeFiles/sfml_test.dir/src/main.cpp.o: \
  /home/moi/Documents/Project/SFML\ Physics/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/moi/Documents/Project/SFML\ Physics/src/engine/Engine.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/Engine.h \
  /usr/include/c++/14/functional \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
@@ -289,14 +289,14 @@ CMakeFiles/sfml_test.dir/src/main.cpp.o: \
  /home/moi/Documents/Project/SFML\ Physics/build/_deps/sfml-src/include/SFML/System/InputStream.hpp \
  /home/moi/Documents/Project/SFML\ Physics/build/_deps/sfml-src/include/SFML/System/MemoryInputStream.hpp \
  /home/moi/Documents/Project/SFML\ Physics/build/_deps/sfml-src/include/SFML/System/Sleep.hpp \
- /home/moi/Documents/Project/SFML\ Physics/src/engine/CollisionSystem.h \
- /home/moi/Documents/Project/SFML\ Physics/src/engine/ColliderComponent.h \
- /home/moi/Documents/Project/SFML\ Physics/src/engine/Component.h \
- /home/moi/Documents/Project/SFML\ Physics/src/engine/Scene.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/CollisionSystem.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/ColliderComponent.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/Component.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/Scene.h \
  /usr/include/c++/14/algorithm /usr/include/c++/14/bits/stl_algo.h \
  /usr/include/c++/14/bits/algorithmfwd.h \
  /usr/include/c++/14/bits/stl_heap.h \
  /usr/include/c++/14/bits/uniform_int_dist.h \
  /usr/include/c++/14/pstl/glue_algorithm_defs.h \
- /home/moi/Documents/Project/SFML\ Physics/src/engine/GameObject.h \
- /home/moi/Documents/Project/SFML\ Physics/src/engine/scenes/PhysicsScene.h
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/GameObject.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/PhysicsScene.h

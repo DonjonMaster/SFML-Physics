@@ -1,11 +1,11 @@
 // Main minimal: configuration engine + push de scene.
-#include "engine/Engine.h"
-#include "engine/scenes/PhysicsScene.h"
+#include "Engine/Engine.h"
+#include "Engine/scenes/PhysicsScene.h"
 
 int main()
 {
 	engine::EngineConfig config;
-	config.windowSize = {900u, 600u};
+	config.windowSize = {1920u, 1080u};
 	config.title = "Physics Test";
 	config.framerateLimit = 60;
 
