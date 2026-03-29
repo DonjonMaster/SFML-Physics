@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Configure (CMake Debug)",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--preset",
+        "linux-debug"
+      ],
+      "group": "build",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Build (CMake Debug)",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "linux-debug",
+        "-j2"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "dependsOn": "Configure (CMake Debug)"
+    }
+  ]
+}
