@@ -289,4 +289,5 @@ CMakeFiles/sfml_test.dir/src/main.cpp.o: \
  /home/moi/Documents/Project/SFML\ Physics/build/_deps/sfml-src/include/SFML/System/MemoryInputStream.hpp \
  /home/moi/Documents/Project/SFML\ Physics/build/_deps/sfml-src/include/SFML/System/Sleep.hpp \
  /home/moi/Documents/Project/SFML\ Physics/src/Ball.h \
- /home/moi/Documents/Project/SFML\ Physics/src/Platform.h
+ /home/moi/Documents/Project/SFML\ Physics/src/Platform.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Hitbox.h

@@ -1,11 +1,12 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "Platform.h"
 
 class Ball
 {
 public:
-    Ball(float x, float y, float radius);
+    Ball(float x, float y, float radius, float speedX = 3.f, float speedY = 3.f);
 
     void update(float dt);
 

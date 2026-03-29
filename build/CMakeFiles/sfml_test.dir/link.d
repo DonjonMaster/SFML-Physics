@@ -5,6 +5,8 @@ sfml_test: \
   CMakeFiles/sfml_test.dir/src/main.cpp.o \
   CMakeFiles/sfml_test.dir/src/Ball.cpp.o \
   CMakeFiles/sfml_test.dir/src/Platform.cpp.o \
+  CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o \
+  CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o \
   _deps/sfml-build/lib/libsfml-graphics-s-d.a \
   _deps/sfml-build/lib/libsfml-window-s-d.a \
   _deps/sfml-build/lib/libsfml-system-s-d.a \
@@ -74,6 +76,10 @@ CMakeFiles/sfml_test.dir/src/main.cpp.o:
 CMakeFiles/sfml_test.dir/src/Ball.cpp.o:
 
 CMakeFiles/sfml_test.dir/src/Platform.cpp.o:
+
+CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o:
+
+CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o:
 
 _deps/sfml-build/lib/libsfml-graphics-s-d.a:
 

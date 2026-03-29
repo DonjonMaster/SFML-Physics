@@ -287,6 +287,54 @@ src/Platform.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/Platform.cpp.s
 .PHONY : src/Platform.cpp.s
 
+src/engine/ColliderComponent.o: src/engine/ColliderComponent.cpp.o
+.PHONY : src/engine/ColliderComponent.o
+
+# target to build an object file
+src/engine/ColliderComponent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o
+.PHONY : src/engine/ColliderComponent.cpp.o
+
+src/engine/ColliderComponent.i: src/engine/ColliderComponent.cpp.i
+.PHONY : src/engine/ColliderComponent.i
+
+# target to preprocess a source file
+src/engine/ColliderComponent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.i
+.PHONY : src/engine/ColliderComponent.cpp.i
+
+src/engine/ColliderComponent.s: src/engine/ColliderComponent.cpp.s
+.PHONY : src/engine/ColliderComponent.s
+
+# target to generate assembly for a file
+src/engine/ColliderComponent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.s
+.PHONY : src/engine/ColliderComponent.cpp.s
+
+src/engine/Engine.o: src/engine/Engine.cpp.o
+.PHONY : src/engine/Engine.o
+
+# target to build an object file
+src/engine/Engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o
+.PHONY : src/engine/Engine.cpp.o
+
+src/engine/Engine.i: src/engine/Engine.cpp.i
+.PHONY : src/engine/Engine.i
+
+# target to preprocess a source file
+src/engine/Engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.i
+.PHONY : src/engine/Engine.cpp.i
+
+src/engine/Engine.s: src/engine/Engine.cpp.s
+.PHONY : src/engine/Engine.s
+
+# target to generate assembly for a file
+src/engine/Engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.s
+.PHONY : src/engine/Engine.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -335,6 +383,12 @@ help:
 	@echo "... src/Platform.o"
 	@echo "... src/Platform.i"
 	@echo "... src/Platform.s"
+	@echo "... src/engine/ColliderComponent.o"
+	@echo "... src/engine/ColliderComponent.i"
+	@echo "... src/engine/ColliderComponent.s"
+	@echo "... src/engine/Engine.o"
+	@echo "... src/engine/Engine.i"
+	@echo "... src/engine/Engine.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

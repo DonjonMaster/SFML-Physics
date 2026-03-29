@@ -2,15 +2,21 @@
 
 #include <SFML/Graphics.hpp>
 
-class Hitbox
-{
-public:
-    Hitbox(float x, float y, float width, float height);
+#include "Ball.h"
+#include "Platform.h"
 
-    void draw(sf::RenderWindow& window);
-    
-    //Getters and setters
-    sf::FloatRect getBounds() const { return shape.getGlobalBounds(); }
-private:
-    sf::RectangleShape shape;
-};
+void checkCollision(Ball& ball, const Platform& wall)
+{
+    if (!wall.intersects(ball.getBounds()))
+    {
+        return;
+    }
+    if (wall.getCollisionType() == CollisionType::ReverseX)
+    {
+        ball.invertSpeedX();
+    }
+    else
+    {
+        ball.invertSpeedY();
+    }
+}

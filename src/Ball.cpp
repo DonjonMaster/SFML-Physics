@@ -1,14 +1,13 @@
 #include "Ball.h"
 
-Ball::Ball(float x, float y, float radius)
+Ball::Ball(float x, float y, float radius, float speedX, float speedY)
 {
     shape.setRadius(radius);
     shape.setFillColor(sf::Color(80, 180, 255));
     shape.setOutlineThickness(3.f);
     shape.setOutlineColor(sf::Color::White);
     shape.setPosition(sf::Vector2f(x, y));
-    speed.x = 1.f; // Initial horizontal speed
-    speed.y = 1.f; // Initial vertical speed
+    speed = sf::Vector2f(speedX, speedY);
 }
 
 void Ball::update(float dt)

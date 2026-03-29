@@ -114,11 +114,41 @@ CMakeFiles/sfml_test.dir/src/Platform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml_test.dir/src/Platform.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/moi/Documents/Project/SFML Physics/src/Platform.cpp" -o CMakeFiles/sfml_test.dir/src/Platform.cpp.s
 
+CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o: CMakeFiles/sfml_test.dir/flags.make
+CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o: /home/moi/Documents/Project/SFML\ Physics/src/engine/ColliderComponent.cpp
+CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o: CMakeFiles/sfml_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/moi/Documents/Project/SFML Physics/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o -MF CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o.d -o CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o -c "/home/moi/Documents/Project/SFML Physics/src/engine/ColliderComponent.cpp"
+
+CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/moi/Documents/Project/SFML Physics/src/engine/ColliderComponent.cpp" > CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.i
+
+CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/moi/Documents/Project/SFML Physics/src/engine/ColliderComponent.cpp" -o CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.s
+
+CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o: CMakeFiles/sfml_test.dir/flags.make
+CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o: /home/moi/Documents/Project/SFML\ Physics/src/engine/Engine.cpp
+CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o: CMakeFiles/sfml_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/moi/Documents/Project/SFML Physics/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o -MF CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o.d -o CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o -c "/home/moi/Documents/Project/SFML Physics/src/engine/Engine.cpp"
+
+CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/moi/Documents/Project/SFML Physics/src/engine/Engine.cpp" > CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.i
+
+CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/moi/Documents/Project/SFML Physics/src/engine/Engine.cpp" -o CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.s
+
 # Object files for target sfml_test
 sfml_test_OBJECTS = \
 "CMakeFiles/sfml_test.dir/src/main.cpp.o" \
 "CMakeFiles/sfml_test.dir/src/Ball.cpp.o" \
-"CMakeFiles/sfml_test.dir/src/Platform.cpp.o"
+"CMakeFiles/sfml_test.dir/src/Platform.cpp.o" \
+"CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o" \
+"CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o"
 
 # External object files for target sfml_test
 sfml_test_EXTERNAL_OBJECTS =
@@ -126,6 +156,8 @@ sfml_test_EXTERNAL_OBJECTS =
 sfml_test: CMakeFiles/sfml_test.dir/src/main.cpp.o
 sfml_test: CMakeFiles/sfml_test.dir/src/Ball.cpp.o
 sfml_test: CMakeFiles/sfml_test.dir/src/Platform.cpp.o
+sfml_test: CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o
+sfml_test: CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o
 sfml_test: CMakeFiles/sfml_test.dir/build.make
 sfml_test: CMakeFiles/sfml_test.dir/compiler_depend.ts
 sfml_test: _deps/sfml-build/lib/libsfml-graphics-s-d.a
@@ -142,7 +174,7 @@ sfml_test: /usr/lib/x86_64-linux-gnu/libGL.so
 sfml_test: /usr/lib/x86_64-linux-gnu/libudev.so
 sfml_test: /usr/lib/x86_64-linux-gnu/libfreetype.so
 sfml_test: CMakeFiles/sfml_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/moi/Documents/Project/SFML Physics/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sfml_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/moi/Documents/Project/SFML Physics/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sfml_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

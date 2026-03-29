@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/moi/Documents/Project/SFML Physics/src/Ball.cpp" "CMakeFiles/sfml_test.dir/src/Ball.cpp.o" "gcc" "CMakeFiles/sfml_test.dir/src/Ball.cpp.o.d"
   "/home/moi/Documents/Project/SFML Physics/src/Platform.cpp" "CMakeFiles/sfml_test.dir/src/Platform.cpp.o" "gcc" "CMakeFiles/sfml_test.dir/src/Platform.cpp.o.d"
+  "/home/moi/Documents/Project/SFML Physics/src/engine/ColliderComponent.cpp" "CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o" "gcc" "CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o.d"
+  "/home/moi/Documents/Project/SFML Physics/src/engine/Engine.cpp" "CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o" "gcc" "CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o.d"
   "/home/moi/Documents/Project/SFML Physics/src/main.cpp" "CMakeFiles/sfml_test.dir/src/main.cpp.o" "gcc" "CMakeFiles/sfml_test.dir/src/main.cpp.o.d"
   "" "sfml_test" "gcc" "CMakeFiles/sfml_test.dir/link.d"
   )
