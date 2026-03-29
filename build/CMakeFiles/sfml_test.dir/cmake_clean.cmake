@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sfml_test.dir/src/engine/ColliderComponent.cpp.o.d"
   "CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o"
   "CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.o.d"
+  "CMakeFiles/sfml_test.dir/src/engine/scenes/PhysicsScene.cpp.o"
+  "CMakeFiles/sfml_test.dir/src/engine/scenes/PhysicsScene.cpp.o.d"
   "CMakeFiles/sfml_test.dir/src/main.cpp.o"
   "CMakeFiles/sfml_test.dir/src/main.cpp.o.d"
   "sfml_test"

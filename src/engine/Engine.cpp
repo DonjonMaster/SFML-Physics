@@ -9,6 +9,17 @@ Engine::Engine(const EngineConfig& config)
       m_clearColor(config.clearColor)
 {
     m_window.setFramerateLimit(config.framerateLimit);
+    m_scenes.push_back(std::make_unique<Scene>());
+}
+
+void Engine::pushScene(std::unique_ptr<Scene> scene)
+{
+    if (!scene)
+    {
+        return;
+    }
+
+    m_scenes.push_back(std::move(scene));
 }
 
 void Engine::run(const std::function<void(float, Scene&)>& userUpdate)
@@ -20,18 +31,29 @@ void Engine::run(const std::function<void(float, Scene&)>& userUpdate)
         processEvents();
 
         const float dt = clock.restart().asSeconds();
-        m_scene.update(dt);
-        CollisionSystem::process(m_scene);
+        Scene& scene = activeScene();
+        scene.update(dt);
+        CollisionSystem::process(scene);
 
         if (userUpdate)
         {
-            userUpdate(dt, m_scene);
+            userUpdate(dt, scene);
         }
 
         m_window.clear(m_clearColor);
-        m_scene.render(m_window);
+        scene.render(m_window);
         m_window.display();
     }
+}
+
+Scene& Engine::activeScene()
+{
+    if (m_scenes.empty())
+    {
+        m_scenes.push_back(std::make_unique<Scene>());
+    }
+
+    return *m_scenes.back();
 }
 
 void Engine::processEvents()

@@ -335,6 +335,30 @@ src/engine/Engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/Engine.cpp.s
 .PHONY : src/engine/Engine.cpp.s
 
+src/engine/scenes/PhysicsScene.o: src/engine/scenes/PhysicsScene.cpp.o
+.PHONY : src/engine/scenes/PhysicsScene.o
+
+# target to build an object file
+src/engine/scenes/PhysicsScene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/scenes/PhysicsScene.cpp.o
+.PHONY : src/engine/scenes/PhysicsScene.cpp.o
+
+src/engine/scenes/PhysicsScene.i: src/engine/scenes/PhysicsScene.cpp.i
+.PHONY : src/engine/scenes/PhysicsScene.i
+
+# target to preprocess a source file
+src/engine/scenes/PhysicsScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/scenes/PhysicsScene.cpp.i
+.PHONY : src/engine/scenes/PhysicsScene.cpp.i
+
+src/engine/scenes/PhysicsScene.s: src/engine/scenes/PhysicsScene.cpp.s
+.PHONY : src/engine/scenes/PhysicsScene.s
+
+# target to generate assembly for a file
+src/engine/scenes/PhysicsScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sfml_test.dir/build.make CMakeFiles/sfml_test.dir/src/engine/scenes/PhysicsScene.cpp.s
+.PHONY : src/engine/scenes/PhysicsScene.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -389,6 +413,9 @@ help:
 	@echo "... src/engine/Engine.o"
 	@echo "... src/engine/Engine.i"
 	@echo "... src/engine/Engine.s"
+	@echo "... src/engine/scenes/PhysicsScene.o"
+	@echo "... src/engine/scenes/PhysicsScene.i"
+	@echo "... src/engine/scenes/PhysicsScene.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

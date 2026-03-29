@@ -1,7 +1,9 @@
 #pragma once
 
 #include <functional>
+#include <memory>
 #include <string>
+#include <vector>
 
 #include <SFML/Graphics.hpp>
 
@@ -23,6 +25,8 @@ class Engine
 public:
     explicit Engine(const EngineConfig& config = {});
 
+    void pushScene(std::unique_ptr<Scene> scene);
+
     void run(const std::function<void(float, Scene&)>& userUpdate = {});
 
     [[nodiscard]] bool isOpen() const
@@ -37,14 +41,15 @@ public:
 
     [[nodiscard]] Scene& getScene()
     {
-        return m_scene;
+        return activeScene();
     }
 
 private:
     void processEvents();
+    [[nodiscard]] Scene& activeScene();
 
     sf::RenderWindow m_window;
-    Scene m_scene;
+    std::vector<std::unique_ptr<Scene>> m_scenes;
     sf::Color m_clearColor;
 };
 } // namespace engine

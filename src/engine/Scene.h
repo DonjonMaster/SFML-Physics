@@ -12,12 +12,17 @@ namespace engine
 class Scene
 {
 public:
-    GameObject& createObject(const std::string& name = {})
+    GameObject& pushObject(std::unique_ptr<GameObject> object)
     {
-        auto object = std::make_unique<GameObject>(name);
         GameObject& objectRef = *object;
         m_objects.push_back(std::move(object));
         return objectRef;
+    }
+
+    GameObject& createObject(const std::string& name = {})
+    {
+        auto object = std::make_unique<GameObject>(name);
+        return pushObject(std::move(object));
     }
 
     void update(float dt)
