@@ -14,7 +14,7 @@ namespace engine
 {
 struct EngineConfig
 {
-    sf::Vector2u windowSize{900u, 600u};
+    sf::Vector2u windowSize{1920u, 1080u};
     std::string title{"Generic SFML Engine"};
     unsigned int framerateLimit{60};
     sf::Color clearColor{sf::Color(16, 18, 22)};

@@ -7,6 +7,7 @@ namespace engine
 class TransformComponent : public Component
 {
 public:
+
     explicit TransformComponent(GameObject* owner,
                                 sf::Vector2f position = {0.f, 0.f},
                                 float rotation = 0.f,

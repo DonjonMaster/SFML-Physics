@@ -84,7 +84,11 @@ public:
             const sf::Vector2f closest = wallCenter + axisX * clampedX + axisY * clampedY;
             sf::Vector2f diff = center - closest;
             float distSq = diff.x * diff.x + diff.y * diff.y;
-            const float radiusSq = radius * radius;
+            
+            // Use a small margin to catch near-collisions (anti-tunnel effect)
+            constexpr float collisionMargin = 2.f;
+            const float effectiveRadius = radius + collisionMargin;
+            const float radiusSq = effectiveRadius * effectiveRadius;
 
             if (distSq > radiusSq)
             {
@@ -94,25 +98,37 @@ public:
             float dist = std::sqrt(std::max(distSq, 0.0001f));
             sf::Vector2f normal;
 
+            // Determine which zone the ball hits: left end, middle, or right end
+            bool isLeftEnd = (localX < -halfExtents.x);
+            bool isRightEnd = (localX > halfExtents.x);
+            bool isMiddle = (!isLeftEnd && !isRightEnd);
+
             if (dist < 0.001f)
             {
-                if (std::abs(localX) > std::abs(localY))
+                if (isMiddle)
                 {
-                    normal = (localX >= 0.f) ? axisX : -axisX;
+                    // Middle: bounce perpendicular (normal behavior)
+                    normal = (localY >= 0.f) ? axisY : -axisY;
                 }
                 else
                 {
-                    normal = (localY >= 0.f) ? axisY : -axisY;
+                    // Ends: bounce parallel (opposite behavior)
+                    normal = (localX >= 0.f) ? axisX : -axisX;
                 }
                 dist = 0.001f;
             }
             else
             {
+                // Use the actual direction from closest point
                 normal = diff / dist;
             }
 
-            const float penetration = radius - dist;
-            center += normal * penetration;
+            const float penetration = effectiveRadius - dist;
+            if (penetration > 0.f)
+            {
+                // Push ball out of collision with extra buffer
+                center += normal * (penetration + 1.f);
+            }
 
             const float dot = vel.x * normal.x + vel.y * normal.y;
             if (dot < 0.f)
