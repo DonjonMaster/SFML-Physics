@@ -1142,6 +1142,7 @@ CMakeFiles/sfml_test.dir/src/Engine/scenes/PhysicsScene.cpp.o: /home/moi/Documen
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/CircleWallComponent.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/Component.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/GameObject.h \
+  /home/moi/Documents/Project/SFML\ Physics/src/Engine/GravityComponent.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/OrbitWallsBounceComponent.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/Scene.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/TransformComponent.h \
@@ -2280,6 +2281,8 @@ CMakeFiles/sfml_test.dir/src/Engine/ColliderComponent.cpp.o:
 /usr/include/c++/14/tr1/bessel_function.tcc:
 
 /home/moi/Documents/Project/SFML\ Physics/src/Engine/VelocityComponent.h:
+
+/home/moi/Documents/Project/SFML\ Physics/src/Engine/GravityComponent.h:
 
 /home/moi/Documents/Project/SFML\ Physics/src/Engine/CircleWallComponent.h:
 

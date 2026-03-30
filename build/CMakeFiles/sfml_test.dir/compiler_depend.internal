@@ -1146,6 +1146,7 @@ CMakeFiles/sfml_test.dir/src/Engine/scenes/PhysicsScene.cpp.o
  /home/moi/Documents/Project/SFML Physics/src/Engine/CircleWallComponent.h
  /home/moi/Documents/Project/SFML Physics/src/Engine/Component.h
  /home/moi/Documents/Project/SFML Physics/src/Engine/GameObject.h
+ /home/moi/Documents/Project/SFML Physics/src/Engine/GravityComponent.h
  /home/moi/Documents/Project/SFML Physics/src/Engine/OrbitWallsBounceComponent.h
  /home/moi/Documents/Project/SFML Physics/src/Engine/Scene.h
  /home/moi/Documents/Project/SFML Physics/src/Engine/TransformComponent.h

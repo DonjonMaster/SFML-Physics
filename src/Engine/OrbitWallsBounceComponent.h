@@ -227,6 +227,86 @@ public:
             }
         }
 
+        // Ball-ball collisions (equal mass, near-elastic response)
+        for (const auto& object : m_scene->getObjects())
+        {
+            if (!object)
+            {
+                continue;
+            }
+
+            GameObject* other = object.get();
+            if (other == getOwner())
+            {
+                continue;
+            }
+
+            // Avoid double-solving the same pair in the same frame
+            if (getOwner()->getName() >= other->getName())
+            {
+                continue;
+            }
+
+            auto* otherTransform = other->getComponent<TransformComponent>();
+            auto* otherVelocity = other->getComponent<VelocityComponent>();
+            auto* otherCircle = other->getComponent<CircleRendererComponent>();
+            if (!otherTransform || !otherVelocity || !otherCircle)
+            {
+                continue;
+            }
+
+            const float otherRadius = otherCircle->getRadius();
+            sf::Vector2f otherCenter = otherTransform->getPosition() + sf::Vector2f(otherRadius, otherRadius);
+            sf::Vector2f otherVel = otherVelocity->getVelocity();
+
+            sf::Vector2f delta = otherCenter - center;
+            float distSq = delta.x * delta.x + delta.y * delta.y;
+            const float sumRadius = radius + otherRadius;
+            const float sumRadiusSq = sumRadius * sumRadius;
+
+            if (distSq >= sumRadiusSq)
+            {
+                continue;
+            }
+
+            float dist = std::sqrt(std::max(distSq, 0.0001f));
+            sf::Vector2f normal;
+            if (dist < 0.001f)
+            {
+                normal = sf::Vector2f(1.f, 0.f);
+                dist = 0.001f;
+            }
+            else
+            {
+                normal = delta / dist;
+            }
+
+            // Positional correction to remove overlap
+            const float penetration = sumRadius - dist;
+            if (penetration > 0.f)
+            {
+                const float correction = (penetration * 0.5f) + 0.2f;
+                center -= normal * correction;
+                otherCenter += normal * correction;
+                otherTransform->setPosition(otherCenter - sf::Vector2f(otherRadius, otherRadius));
+            }
+
+            // Elastic impulse along collision normal (equal masses)
+            const sf::Vector2f relativeVel = otherVel - vel;
+            const float relAlongNormal = relativeVel.x * normal.x + relativeVel.y * normal.y;
+            if (relAlongNormal >= 0.f)
+            {
+                continue;
+            }
+
+            constexpr float restitution = 0.98f;
+            const float impulse = -(1.f + restitution) * relAlongNormal * 0.5f;
+
+            vel -= normal * impulse;
+            otherVel += normal * impulse;
+            otherVelocity->setVelocity(otherVel);
+        }
+
         transform->setPosition(center - sf::Vector2f(radius, radius));
         velocity->setVelocity(vel);
     }
