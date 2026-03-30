@@ -1,5 +1,7 @@
 #include "PhysicsScene.h"
 
+#include <array>
+#include <cmath>
 #include <string>
 
 #include "../CircleRendererComponent.h"
@@ -12,68 +14,114 @@
 
 namespace engine::scenes
 {
+namespace
+{
+constexpr float kWindowWidth = 1920.f;
+constexpr float kWindowHeight = 1080.f;
+constexpr float kLevelRadius = 430.f;
+constexpr float kGravity = 1000.f;
+constexpr float kEntryAngleDeg = -90.f; // North (top)
+constexpr float kExitAngleDeg = 90.f;   // South (bottom)
+constexpr float kOpeningHalfAngleDeg = 5.f;
+constexpr float kBallRadius = 20.f;
+
+sf::Vector2f levelCenter()
+{
+    return {kWindowWidth * 0.5f, kWindowHeight * 0.5f};
+}
+
+sf::Vector2f entryDirection()
+{
+    const float entryAngleRad = kEntryAngleDeg * 3.14159265358979323846f / 180.f;
+    return {std::cos(entryAngleRad), std::sin(entryAngleRad)};
+}
+
+sf::Vector2f inwardDirection()
+{
+    const sf::Vector2f dir = entryDirection();
+    return {-dir.x, -dir.y};
+}
+
+sf::Vector2f entryPoint()
+{
+    return levelCenter() + entryDirection() * (kLevelRadius - 45.f);
+}
+
+sf::Color moverColor(int index)
+{
+    static const std::array<sf::Color, 8> colors{
+        sf::Color(200, 200, 255),
+        sf::Color(255, 120, 120),
+        sf::Color(120, 255, 120),
+        sf::Color(255, 220, 120),
+        sf::Color(120, 220, 255),
+        sf::Color(220, 120, 255),
+        sf::Color(255, 170, 210),
+        sf::Color(170, 255, 220)
+    };
+
+    return colors[static_cast<std::size_t>(index) % colors.size()];
+}
+
+void spawnMoverInternal(Scene& scene, int index)
+{
+    auto mover = std::make_unique<GameObject>("Mover" + std::to_string(index));
+    const sf::Vector2f inDir = inwardDirection();
+    const sf::Vector2f spawn = entryPoint() + inDir * (14.f * static_cast<float>(index % 6));
+    const sf::Vector2f vel = inDir * (210.f + 8.f * static_cast<float>(index % 5))
+        + sf::Vector2f((index % 3 - 1) * 30.f, (index % 4 - 1.5f) * 24.f);
+
+    mover->addComponent<TransformComponent>(spawn);
+    mover->addComponent<CircleRendererComponent>(kBallRadius, moverColor(index));
+    mover->addComponent<VelocityComponent>(vel);
+    mover->addComponent<GravityComponent>(kGravity);
+    mover->addComponent<OrbitWallsBounceComponent>(&scene, std::vector<std::string>{"LevelCircle"});
+    scene.pushObject(std::move(mover));
+}
+} // namespace
+
 std::unique_ptr<Scene> createPhysicsScene()
 {
-    constexpr float windowWidth = 1920.f;
-    constexpr float windowHeight = 1080.f;
-
     // Create scene
     auto scene = std::make_unique<Scene>();
 
     // Create one internal circular wall (hollow circle where balls bounce inside)
-    auto pushInternalCircleWall = [&](const std::string& name, sf::Vector2f position, float radius, sf::Color color)
+    auto pushInternalCircleWall = [&](const std::string& name,
+                                      sf::Vector2f position,
+                                      float radius,
+                                      sf::Color color,
+                                      float entryAngleDeg,
+                                      float exitAngleDeg,
+                                      float openingHalfAngleDeg)
     {
         auto wall = std::make_unique<GameObject>(name);
         wall->addComponent<TransformComponent>(position);
-        wall->addComponent<CircleWallComponent>(radius, color, 8.f, true);  // Internal
+        auto& circleWall = wall->addComponent<CircleWallComponent>(radius, color, 8.f, true);  // Internal
+        circleWall.setOpenings(entryAngleDeg, exitAngleDeg, openingHalfAngleDeg);
         scene->pushObject(std::move(wall));
     };
 
     // Single large hollow-circle level
-    const float centerX = windowWidth * 0.5f;
-    const float centerY = windowHeight * 0.5f;
-    const float levelRadius = 430.f;
-    const float gravity = 1000.f;
-    pushInternalCircleWall("LevelCircle", {centerX, centerY}, levelRadius, sf::Color(100, 150, 220));
+    const sf::Vector2f center = levelCenter();
+    pushInternalCircleWall("LevelCircle",
+                           center,
+                           kLevelRadius,
+                           sf::Color(100, 150, 220),
+                           kEntryAngleDeg,
+                           kExitAngleDeg,
+                           kOpeningHalfAngleDeg);
 
-    // Create moving objects
-    auto pushMover = [&](const std::string& name, sf::Vector2f position, float radius, sf::Vector2f velocity, sf::Color color)
+    for (int i = 1; i <= 16; ++i)
     {
-        auto mover = std::make_unique<GameObject>(name);
-        mover->addComponent<TransformComponent>(position);
-        mover->addComponent<CircleRendererComponent>(radius, color);
-        mover->addComponent<VelocityComponent>(velocity);
-        mover->addComponent<GravityComponent>(gravity);
-        
-        std::vector<std::string> walls{"LevelCircle"};
-        
-        mover->addComponent<OrbitWallsBounceComponent>(scene.get(), walls);
-        scene->pushObject(std::move(mover));
-    };
-
-    // Movers positioned inside the single circle
-    pushMover("MoverA", {centerX - 180.f, centerY - 90.f}, 25.f, {220.f, -170.f}, sf::Color(80, 180, 255));
-    pushMover("MoverB", {centerX + 180.f, centerY - 90.f}, 25.f, {-220.f, -170.f}, sf::Color(255, 120, 120));
-    pushMover("MoverC", {centerX - 120.f, centerY + 120.f}, 25.f, {180.f, 210.f}, sf::Color(120, 255, 120));
-    pushMover("MoverD", {centerX + 120.f, centerY + 120.f}, 25.f, {-180.f, 210.f}, sf::Color(255, 255, 120));
-    pushMover("MoverE", {centerX, centerY - 200.f}, 25.f, {0.f, 250.f}, sf::Color(255, 120, 255));
-    pushMover("MoverF", {centerX, centerY + 200.f}, 25.f, {0.f, -250.f}, sf::Color(120, 255, 255));
-    pushMover("MoverG", {centerX - 200.f, centerY}, 25.f, {250.f, 0.f}, sf::Color(255, 200, 120));
-    pushMover("MoverH", {centerX + 200.f, centerY}, 25.f, {-250.f, 0.f}, sf::Color(120, 200, 255));
-    pushMover("MoverI", {centerX - 150.f, centerY}, 25.f, {200.f, 0.f}, sf::Color(200, 255, 120));
-    pushMover("MoverJ", {centerX + 150.f, centerY}, 25.f, {-200.f, 0.f}, sf::Color(120, 255, 200));
-    pushMover("MoverK", {centerX, centerY - 150.f}, 25.f, {0.f, 200.f}, sf::Color(255, 120, 200));
-
-    for (int i = 0; i < 200; ++i)
-    {
-        const float angle = i * 36.f;
-        const float radians = angle * 3.14159265358979323846f / 180.f;
-        const float radius = levelRadius - 50.f;
-        const sf::Vector2f pos = {centerX + radius * std::cos(radians), centerY + radius * std::sin(radians)};
-        const sf::Vector2f vel = {-150.f * std::sin(radians), 150.f * std::cos(radians)};
-        pushMover("Mover" + std::to_string(i + 1), pos, 20.f, vel, sf::Color(200, 200, 255));
+        spawnMoverInternal(*scene, i);
     }
 
     return scene;
+}
+
+void spawnMoverAtEntry(Scene& scene)
+{
+    static int spawnCounter = 2000;
+    spawnMoverInternal(scene, spawnCounter++);
 }
 } // namespace engine::scenes

@@ -295,12 +295,6 @@ CMakeFiles/sfml_test.dir/src/Engine/scenes/PhysicsScene.cpp.o: \
  /home/moi/Documents/Project/SFML\ Physics/build/_deps/sfml-src/include/SFML/System/InputStream.hpp \
  /home/moi/Documents/Project/SFML\ Physics/build/_deps/sfml-src/include/SFML/System/MemoryInputStream.hpp \
  /home/moi/Documents/Project/SFML\ Physics/build/_deps/sfml-src/include/SFML/System/Sleep.hpp \
- /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../CircleRendererComponent.h \
- /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../TransformComponent.h \
- /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../CircleWallComponent.h \
- /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../GravityComponent.h \
- /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../VelocityComponent.h \
- /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../OrbitWallsBounceComponent.h \
  /usr/include/c++/14/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -324,4 +318,10 @@ CMakeFiles/sfml_test.dir/src/Engine/scenes/PhysicsScene.cpp.o: \
  /usr/include/c++/14/tr1/poly_hermite.tcc \
  /usr/include/c++/14/tr1/poly_laguerre.tcc \
  /usr/include/c++/14/tr1/riemann_zeta.tcc \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../CircleRendererComponent.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../TransformComponent.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../CircleWallComponent.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../GravityComponent.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../VelocityComponent.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../OrbitWallsBounceComponent.h \
  /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/../BoxRendererComponent.h

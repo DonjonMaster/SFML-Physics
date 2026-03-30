@@ -299,4 +299,7 @@ CMakeFiles/sfml_test.dir/src/main.cpp.o: \
  /usr/include/c++/14/bits/uniform_int_dist.h \
  /usr/include/c++/14/pstl/glue_algorithm_defs.h \
  /home/moi/Documents/Project/SFML\ Physics/src/Engine/GameObject.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/GravityComponent.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/VelocityComponent.h \
+ /home/moi/Documents/Project/SFML\ Physics/src/Engine/TransformComponent.h \
  /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/PhysicsScene.h

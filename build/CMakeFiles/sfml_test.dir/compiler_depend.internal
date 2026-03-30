@@ -1881,7 +1881,10 @@ CMakeFiles/sfml_test.dir/src/main.cpp.o
  /home/moi/Documents/Project/SFML Physics/src/Engine/Component.h
  /home/moi/Documents/Project/SFML Physics/src/Engine/Engine.h
  /home/moi/Documents/Project/SFML Physics/src/Engine/GameObject.h
+ /home/moi/Documents/Project/SFML Physics/src/Engine/GravityComponent.h
  /home/moi/Documents/Project/SFML Physics/src/Engine/Scene.h
+ /home/moi/Documents/Project/SFML Physics/src/Engine/TransformComponent.h
+ /home/moi/Documents/Project/SFML Physics/src/Engine/VelocityComponent.h
  /home/moi/Documents/Project/SFML Physics/src/Engine/scenes/PhysicsScene.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h

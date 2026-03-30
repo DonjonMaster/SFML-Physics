@@ -7,4 +7,5 @@
 namespace engine::scenes
 {
 std::unique_ptr<Scene> createPhysicsScene();
+void spawnMoverAtEntry(Scene& scene);
 }

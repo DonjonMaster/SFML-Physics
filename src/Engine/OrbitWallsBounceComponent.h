@@ -87,6 +87,13 @@ public:
                         continue;
                     }
 
+                    // If the ball reaches the boundary at an opening angle, let it pass.
+                    const float angleDeg = std::atan2(delta.y, delta.x) * 180.f / 3.14159265358979323846f;
+                    if (circleWall->isAngleInOpening(angleDeg))
+                    {
+                        continue;
+                    }
+
                     if (dist < 0.001f)
                     {
                         normal = sf::Vector2f(1.f, 0.f);
