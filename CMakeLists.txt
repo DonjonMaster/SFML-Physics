@@ -34,5 +34,6 @@ target_link_libraries(sfml_test PRIVATE SFML::Graphics SFML::Window SFML::System
 
 # Symboles de debug et optimisation desactivee en mode Debug.
 target_compile_options(sfml_test PRIVATE
-    $<$<CONFIG:Debug>:-g3 -O0>
+    $<$<AND:$<CONFIG:Debug>,$<NOT:$<CXX_COMPILER_ID:MSVC>>>:-g3 -O0>
+    $<$<AND:$<CONFIG:Debug>,$<CXX_COMPILER_ID:MSVC>>:/Zi /Od>
 )
