@@ -1139,12 +1139,11 @@ CMakeFiles/sfml_test.dir/src/Engine/scenes/PhysicsScene.cpp.o: /home/moi/Documen
   _deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/BoxRendererComponent.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/CircleRendererComponent.h \
+  /home/moi/Documents/Project/SFML\ Physics/src/Engine/CircleWallComponent.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/Component.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/GameObject.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/OrbitWallsBounceComponent.h \
-  /home/moi/Documents/Project/SFML\ Physics/src/Engine/RotationComponent.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/Scene.h \
-  /home/moi/Documents/Project/SFML\ Physics/src/Engine/SpriteBoundsBounceComponent.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/TransformComponent.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/VelocityComponent.h \
   /home/moi/Documents/Project/SFML\ Physics/src/Engine/scenes/PhysicsScene.h \
@@ -2282,7 +2281,7 @@ CMakeFiles/sfml_test.dir/src/Engine/ColliderComponent.cpp.o:
 
 /home/moi/Documents/Project/SFML\ Physics/src/Engine/VelocityComponent.h:
 
-/home/moi/Documents/Project/SFML\ Physics/src/Engine/RotationComponent.h:
+/home/moi/Documents/Project/SFML\ Physics/src/Engine/CircleWallComponent.h:
 
 /home/moi/Documents/Project/SFML\ Physics/src/Engine/BoxRendererComponent.h:
 
@@ -2317,8 +2316,6 @@ CMakeFiles/sfml_test.dir/src/Engine/ColliderComponent.cpp.o:
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/home/moi/Documents/Project/SFML\ Physics/src/Engine/SpriteBoundsBounceComponent.h:
 
 /home/moi/Documents/Project/SFML\ Physics/src/Engine/OrbitWallsBounceComponent.h:
 
