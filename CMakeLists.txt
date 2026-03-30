@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.21)
 project(SFMLPhysics LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -37,3 +37,13 @@ target_compile_options(sfml_test PRIVATE
     $<$<AND:$<CONFIG:Debug>,$<NOT:$<CXX_COMPILER_ID:MSVC>>>:-g3 -O0>
     $<$<AND:$<CONFIG:Debug>,$<CXX_COMPILER_ID:MSVC>>:/Zi /Od>
 )
+
+# On Windows, copy SFML DLLs next to the executable after each build.
+if(WIN32)
+    add_custom_command(TARGET sfml_test POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            $<TARGET_RUNTIME_DLLS:sfml_test>
+            $<TARGET_FILE_DIR:sfml_test>
+        COMMAND_EXPAND_LISTS
+    )
+endif()
