@@ -9,7 +9,7 @@
 int main()
 {
 	engine::EngineConfig config;
-	config.windowSize = {1920u, 1080u};
+	config.windowSize = {1368u, 768u};
 	config.title = "Physics Test";
 	config.framerateLimit = 60;
 

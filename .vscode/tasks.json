@@ -10,6 +10,7 @@
         "linux-debug"
       ],
       "group": "build",
+      "cwd": "${workspaceFolder}",
       "problemMatcher": [
         "$gcc"
       ]
@@ -28,10 +29,22 @@
         "kind": "build",
         "isDefault": true
       },
+      "cwd": "${workspaceFolder}",
       "problemMatcher": [
         "$gcc"
       ],
       "dependsOn": "Configure (CMake Debug)"
+    },
+    {
+      "label": "Run (F5)",
+      "type": "shell",
+      "command": "${workspaceFolder}/build/sfml_test",
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "cwd": "${workspaceFolder}",
+      "isBackground": false
     }
   ]
 }

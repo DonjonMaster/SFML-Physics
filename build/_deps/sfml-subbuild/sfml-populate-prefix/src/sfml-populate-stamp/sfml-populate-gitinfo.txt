@@ -3,13 +3,13 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/moi/Documents/Project/SFML Physics/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
-source_dir=/home/moi/Documents/Project/SFML Physics/build/_deps/sfml-src
-work_dir=/home/moi/Documents/Project/SFML Physics/build/_deps
+command=/usr/bin/cmake;-P;/home/donjon/Documents/SFML-Physics/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+source_dir=/home/donjon/Documents/SFML-Physics/build/_deps/sfml-src
+work_dir=/home/donjon/Documents/SFML-Physics/build/_deps
 repository=https://github.com/SFML/SFML.git
 remote=origin
 init_submodules=TRUE
 recurse_submodules=--recursive
 submodules=
 CMP0097=NEW
-      
+

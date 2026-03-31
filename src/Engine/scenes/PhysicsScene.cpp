@@ -16,9 +16,9 @@ namespace engine::scenes
 {
 namespace
 {
-constexpr float kWindowWidth = 1920.f;
-constexpr float kWindowHeight = 1080.f;
-constexpr float kLevelRadius = 430.f;
+constexpr float kWindowWidth = 1368.f;
+constexpr float kWindowHeight = 768.f;
+constexpr float kLevelRadius = 300.f;
 constexpr float kGravity = 1000.f;
 constexpr float kEntryAngleDeg = -90.f; // North (top)
 constexpr float kExitAngleDeg = 90.f;   // South (bottom)

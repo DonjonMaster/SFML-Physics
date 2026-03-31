@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sfml_test.dir/link.d"
   "CMakeFiles/sfml_test.dir/src/Ball.cpp.o"
   "CMakeFiles/sfml_test.dir/src/Ball.cpp.o.d"
   "CMakeFiles/sfml_test.dir/src/Engine/ColliderComponent.cpp.o"
